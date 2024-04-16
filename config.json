@@ -3,8 +3,7 @@
         {
             "name": "Angry Birds",
             "description": "A popular mobile game where you launch birds at pigs using a slingshot.",
-            "image": "",
-            "video": "template.gif",
+            "image": "template.gif",
             "src": "angry-birds",
             "language": "cpp",
             "rating":"3",
