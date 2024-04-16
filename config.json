@@ -1,0 +1,41 @@
+{
+    "games": [
+        {
+            "name": "Angry Birds",
+            "description": "A popular mobile game where you launch birds at pigs using a slingshot.",
+            "image": "",
+            "video": "template.gif",
+            "src": "angry-birds",
+            "language": "cpp",
+            "rating":"3",
+            "command": "clang++ program.cpp -l SplashKit -o program && ./program"
+        },
+        {
+            "name": "Asteroids",
+            "description": "A classic arcade game where you pilot a spaceship and destroy asteroids.",
+            "image": "",
+            "src": "asteroids",
+            "language": "csharp",
+            "rating":"4",
+            "command": "dotnet run"
+        },
+        {
+            "name": "DxBallGame",
+            "description": "A classic arcade game where you control a paddle to bounce a ball and break bricks.",
+            "image": "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/0f5173aa-96da-11e6-9405-00163ec9f5fa/4242823519/dx-ball-2-screenshot.jpg",
+            "src": "dx-ball",
+            "language": "cpp",
+            "rating":"4",
+            "command": "clang++ program.cpp -l SplashKit -o program && ./program"
+        },
+        {
+            "name": "Road Runner",
+            "description": "A classic arcade game where you control a car and avoid obstacles.",
+            "image": "",
+            "src": "road-runner",
+            "language": "cpp",
+            "rating":"3",
+            "command": "clang++ program.cpp -l SplashKit -o program && ./program"
+        }
+    ]
+}

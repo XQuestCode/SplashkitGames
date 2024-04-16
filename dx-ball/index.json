@@ -1,0 +1,7 @@
+{
+    "name": "DxBallGame",
+    "description": "A classic arcade game where you control a paddle to bounce a ball and break bricks.",
+    "image": "dxball.png",
+    "language": "cpp",
+    "command": "clang++ program.cpp -l SplashKit -o program && ./program"
+}
