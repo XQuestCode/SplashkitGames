@@ -1,0 +1,49 @@
+name: Copy index.json to config.json
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Copy index.json to config.json
+        run: |
+          # Create the config.json file
+          echo '{"games":[]}' > config.json
+
+          # Loop through each subfolder
+          for dir in */; do
+            # Check if the subfolder contains an index.json file
+            if [ -f "$dir/index.json" ]; then
+              # Get the game name from the index.json file
+              name=$(jq -r '.name' "$dir/index.json")
+              
+              # Get the other fields from the index.json file
+              description=$(jq -r '.description' "$dir/index.json")
+              image=$(jq -r '.image' "$dir/index.json")
+              video=$(jq -r '.video' "$dir/index.json")
+              src=$(basename "$dir")
+              language=$(jq -r '.language' "$dir/index.json")
+              rating=$(jq -r '.rating' "$dir/index.json")
+              command=$(jq -r '.command' "$dir/index.json")
+              
+              # Add the game to the config.json file
+              jq --arg name "$name" --arg description "$description" --arg image "$image" --arg video "$video" --arg src "$src" --arg language "$language" --arg rating "$rating" --arg command "$command" '.games += [{"name":$name,"description":$description,"image":$image,"video":$video,"src":$src,"language":$language,"rating":$rating,"command":$command}]' config.json > config.json.tmp && mv config.json.tmp config.json
+            fi
+          done
+
+          # Display the contents of the config.json file
+          cat config.json
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update config.json
+          branch: ${{ github.head_ref }}

@@ -1,0 +1,7 @@
+{
+    "name": "Road Runner",
+    "description": "A basic 2D game where you control a character and collect the stars.",
+    "image": "",
+    "language": "cpp",
+    "command": "clang++ *.cpp -l SplashKit -o RoadRunner && ./RoadRunner"
+}

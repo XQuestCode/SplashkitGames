@@ -1,0 +1,7 @@
+{
+    "name": "Angry Birds",
+    "description": "A simple game of Angry Birds",
+    "image": "template.gif",
+    "language": "cpp",
+    "command": "clang++ *.cpp -l SplashKit -o game && ./game"
+}
