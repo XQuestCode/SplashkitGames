@@ -1,7 +1,7 @@
 {
     "name": "Asteroids",
     "description": "A classic arcade game where you pilot a spaceship and destroy asteroids.",
-    "image": "asteroids.png",
+    "image": "",
     "language": "csharp",
     "command": "dotnet run"
 }
