@@ -13,7 +13,7 @@
     {
       "name": "Asteroids",
       "description": "A classic arcade game where you pilot a spaceship and destroy asteroids.",
-      "image": "asteroids.png",
+      "image": "",
       "video": "null",
       "src": "asteroids",
       "language": "csharp",
@@ -23,7 +23,7 @@
     {
       "name": "DxBallGame",
       "description": "A classic arcade game where you control a paddle to bounce a ball and break bricks.",
-      "image": "dxball.png",
+      "image": "game.gif",
       "video": "null",
       "src": "dx-ball",
       "language": "cpp",
